@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 58591184}
   - component: {fileID: 58591183}
+  - component: {fileID: 58591185}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -206,6 +207,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &58591185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58591182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e831b8809f93f1840ba3160fdfbfce7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.013595581
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.17654912
+      value: 1.231616
+      inSlope: 0.79618776
+      outSlope: 0.79618776
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4539982
+      value: 0.14351922
+      inSlope: 0.24043237
+      outSlope: 0.24043237
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.36782548
+    - serializedVersion: 3
+      time: 0.69309205
+      value: 0.896458
+      inSlope: 1.1029897
+      outSlope: 1.1029897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 0
 --- !u!1 &264034175
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +404,12 @@ MonoBehaviour:
   start: {fileID: 58591184}
   end: {fileID: 264034177}
   t: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!212 &746940476
 SpriteRenderer:
   m_ObjectHideFlags: 0
