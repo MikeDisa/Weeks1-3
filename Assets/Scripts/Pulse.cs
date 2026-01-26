@@ -5,7 +5,7 @@ public class Pulse : MonoBehaviour
 {
     //storage of the scaled size and original size
     Vector2 Size1 = new Vector2(1,1);
-    Vector2 Size2 = new Vector2(1.5f,1.5f);
+    Vector2 Size2 = new Vector2(1.25f,1.25f);
 
     bool peak = false;
     

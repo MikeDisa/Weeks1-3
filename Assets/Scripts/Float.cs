@@ -22,7 +22,13 @@ public class Float : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.position = anchor.position;
+        //Needed to add this to fix a bug where stuff would snap to middle. makes sure that sprites have their anchor sprite from frame 1
+            firstPosition = anchor.position;
+            secondPosition = firstPosition;
+            thirdPosition = firstPosition;
+            transform.position = firstPosition;
+        
+        //making sure it knows where the top of the screen is in world units
         top = Camera.main.ScreenToWorldPoint(new Vector3(0f, Screen.height, 0f)).y;
     }
 
@@ -50,7 +56,7 @@ public class Float : MonoBehaviour
 
         if (leg == 0)
         {
-            transform.position = Vector2.Lerp(firstPosition, secondPosition, t);
+            transform.position = Vector2.Lerp(firstPosition, secondPosition, easedT);
 
             if (t >= 1f)
             {
@@ -60,7 +66,7 @@ public class Float : MonoBehaviour
         }
         else 
         {
-            transform.position = Vector2.Lerp(secondPosition, thirdPosition, t);
+            transform.position = Vector2.Lerp(secondPosition, thirdPosition, easedT);
 
             
             if (t >= 1f)
