@@ -3,7 +3,7 @@ using UnityEngine;
 public class WorldTimer : MonoBehaviour
 {
     float timer = 0f;
-    public float beat = 3f;
+    public float beat = 1.5f;
 
     public int cue = 0;
 

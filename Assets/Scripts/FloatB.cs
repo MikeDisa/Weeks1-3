@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Float : MonoBehaviour
+public class FloatB : MonoBehaviour
 {
     //lets me plug in a sprite for it to stick to
     public Transform anchor;
@@ -23,11 +23,11 @@ public class Float : MonoBehaviour
     void Start()
     {
         //Needed to add this to fix a bug where stuff would snap to middle. makes sure that sprites have their anchor sprite from frame 1
-            firstPosition = anchor.position;
-            secondPosition = firstPosition;
-            thirdPosition = firstPosition;
-            transform.position = firstPosition;
-        
+        firstPosition = anchor.position;
+        secondPosition = firstPosition;
+        thirdPosition = firstPosition;
+        transform.position = firstPosition;
+
         //making sure it knows where the top of the screen is in world units
         top = Camera.main.ScreenToWorldPoint(new Vector3(0f, Screen.height, 0f)).y;
     }
@@ -37,14 +37,14 @@ public class Float : MonoBehaviour
     {
         if (!playing && timer.cue == 1)
         {
-            //timer.cue = 0; Moved to a different script so it only plays once
+            timer.cue = 0;
             playing = true;
             leg = 0;
             t = 0f;
 
             firstPosition = anchor ? (Vector2)anchor.position : (Vector2)transform.position;
 
-            secondPosition = firstPosition + new Vector2(2,3);
+            secondPosition = firstPosition + new Vector2(2, 3);
 
             thirdPosition = new Vector2(firstPosition.x, top);
 
@@ -64,11 +64,11 @@ public class Float : MonoBehaviour
                 leg = 1;
             }
         }
-        else 
+        else
         {
             transform.position = Vector2.Lerp(secondPosition, thirdPosition, easedT);
 
-            
+
             if (t >= 1f)
             {
                 Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);
